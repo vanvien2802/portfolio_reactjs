@@ -1,14 +1,41 @@
-import React from "react";
-import "./nav.css";
+import React, { useEffect, useState } from "react";
 import { AiOutlineHome, AiOutlineUser } from "react-icons/ai";
 import { BiBook } from "react-icons/bi";
 import { RiServiceLine } from "react-icons/ri";
 import { BiMessageSquareDetail } from "react-icons/bi";
-import { useState } from "react";
 import { Link } from "react-scroll";
+import './nav.css'
 
 const Nav = () => {
   const [activeNav, setActiveNav] = useState("#header");
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const sections = document.querySelectorAll("section");
+      const scrollPosition = window.pageYOffset;
+      let activeSection = "";
+
+      sections.forEach((section) => {
+        const sectionTop = section.offsetTop;
+        const sectionHeight = section.clientHeight;
+
+        if (
+          scrollPosition >= sectionTop - sectionHeight * 0.5 &&
+          scrollPosition < sectionTop + sectionHeight * 0.5
+        ) {
+          activeSection = `#${section.id}`;
+        }
+      });
+
+      setActiveNav(activeSection);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
+
   return (
     <nav>
       <Link
@@ -39,11 +66,11 @@ const Nav = () => {
         <BiBook />
       </Link>
       <Link
-        to="services"
+        to="portfolio"
         smooth={true}
         spy={true}
-        onClick={() => setActiveNav("#services")}
-        className={activeNav === "#services" ? "active" : ""}
+        onClick={() => setActiveNav("#portfolio")}
+        className={activeNav === "#portfolio" ? "active" : ""}
       >
         <RiServiceLine />
       </Link>

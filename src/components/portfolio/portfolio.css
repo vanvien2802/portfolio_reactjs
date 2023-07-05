@@ -9,7 +9,8 @@
     padding:1.2rem;
     border-radius: 2rem;
     border: 1px solid transparent;
-    transition: var(--transition)
+    transition: var(--transition);
+    text-align: center;
 }
 
 .portfolio__item:hover{
@@ -23,11 +24,18 @@
     display: flex;
     justify-content:center;
     align-items:center;
+    margin-bottom: 1.6rem;
 }
 .portfolio__item-image > img{
     border-radius: 1.5rem;
 }
 
+.portfolio__item > p{
+    padding-top:none;
+    font-weight: 300;
+    margin-bottom: 1.5rem;
+    color: rgb(196, 193, 193);
+}
 
 .portfolio__item h3{
     margin: 1.2rem 0 2rem;

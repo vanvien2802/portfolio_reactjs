@@ -3,7 +3,7 @@ import "./about.css";
 import ME from "../../assets/me-about.jpg";
 
 import { FaAward } from "react-icons/fa";
-import { FiUsers } from "react-icons/fi";
+import { GiTargetPrize } from "react-icons/gi";
 import { VscFolderLibrary } from "react-icons/vsc";
 
 const About = () => {
@@ -22,26 +22,32 @@ const About = () => {
             <article className="about__card">
               <FaAward className="about__icon" />
               <h5>Experience</h5>
-              <small>3+ Years Working</small>
+              <small>4th year student</small>
             </article>
             <article className="about__card">
-              <FiUsers className="about__icon" />
-              <h5>Clients</h5>
-              <small>200+ Worldwide</small>
+              <GiTargetPrize className="about__icon" />
+              <h5>GPA</h5>
+              <small>3.35/4.0</small>
             </article>
             <article className="about__card">
               <VscFolderLibrary className="about__icon" />
               <h5>Project</h5>
-              <small>80+ Completed</small>
+              <small>10+ Completed</small>
             </article>
           </div>
           <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Eaque eos
-            voluptatem eius dolorem maiores nihil ducimus at rem ullam
-            reprehenderit quidem quia deserunt, molestiae, eligendi amet
-            repellat molestias quos totam.
+            With a deep passion for technology, I am gradually turning my dreams
+            into reality while being a student. Currently, I am a 4th-year
+            student at Danang University of Science and Technology. With the
+            knowledge foundation I have acquired in school regarding programming
+            languages, I have a basic understanding of front-end languages such
+            as HTML-CSS, JavaScript, and some others. I have also self-studied
+            and gained a basic knowledge of ReactJS. I believe in my ability to
+            make a small contribution to your company.
           </p>
-          <a href="#contact" className="btn btn-primary">Let's Talk</a>
+          <a href="#contact" className="btn btn-primary">
+            Let's Talk
+          </a>
         </div>
       </div>
     </section>
