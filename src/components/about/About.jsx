@@ -27,7 +27,7 @@ const About = () => {
             <article className="about__card">
               <GiTargetPrize className="about__icon" />
               <h5>GPA</h5>
-              <small>3.35/4.0</small>
+              <small>3.34/4.0</small>
             </article>
             <article className="about__card">
               <VscFolderLibrary className="about__icon" />
